@@ -3,7 +3,10 @@ public class Funcionario extends Pessoa{
     private double salario;
     private int horas_semanais;
     private double bonificacao;
+    private final String[] avaliacao = {"Pessima","Ruim","Regular","Bom", "Excelente"};
+
     private static int identificacao_Sequencial = 0;
+
 
     public double getSalario() {
         return salario;
@@ -27,6 +30,10 @@ public class Funcionario extends Pessoa{
 
     public void setBonificacao(double bonificacao) {
         this.bonificacao = bonificacao;
+    }
+
+    public String avaliacaoFuncionario(int nota){
+        return avaliacao[nota];
     }
 
 
