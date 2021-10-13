@@ -1,6 +1,5 @@
 public class Cliente extends Pessoa{
     
-
     private String cpf;
     private static int identificacao_Sequencial = 0;
 
