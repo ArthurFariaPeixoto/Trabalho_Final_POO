@@ -39,9 +39,8 @@ public class Produto {
         this.codigo = codigo;
     }
 
+
     public Produto() {
-
         identificacao_Sequencial+=1;
-
     }
 }

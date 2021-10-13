@@ -29,6 +29,7 @@ public class Funcionario extends Pessoa{
         this.bonificacao = bonificacao;
     }
 
+
     public Funcionario() {
         identificacao_Sequencial += 1;
     }
