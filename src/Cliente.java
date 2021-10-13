@@ -1,7 +1,5 @@
 public class Cliente extends Pessoa{
     
-    
-    //teste alo alo alo
 
     private String cpf;
     private static int identificacao_Sequencial = 0;
