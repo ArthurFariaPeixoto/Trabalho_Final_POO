@@ -4,6 +4,7 @@ public class Produto {
     private double preco;
     private double desconto;
     private String codigo;
+    private static int identificacao_Sequencial = 0;
 
 
     public String getNome() {
@@ -36,5 +37,11 @@ public class Produto {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public Produto() {
+
+        identificacao_Sequencial+=1;
+
     }
 }
