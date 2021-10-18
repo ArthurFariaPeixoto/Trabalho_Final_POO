@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Tela extends JFrame {
 
@@ -16,6 +17,7 @@ public class Tela extends JFrame {
         tela.setDefaultCloseOperation(EXIT_ON_CLOSE);
         tela.requestFocus();
         tela.setLocationRelativeTo(null);
+        tela.getContentPane().setBackground(Color.BLACK);
     }
 
 }
