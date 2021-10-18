@@ -4,19 +4,14 @@ public class Produto {
     private double preco;
     private double desconto;
     private String codigo;
-    private final String[] tarja = {"MIP",
-            "Amarela",
-            "Vermelha",
-            "Preta"
+    private final String[] tarja = {"MIP", "Amarela", "Vermelha", "Preta"
     //MIP = Medicamentos Isentos de Prescrição (livre)
     //Amarela = Generico
     //Vermelha = Necessitam de uma prescrição assinada por um profissional da Saúde
     //Preta = precisam de um maior controle e cuidado na hora de receita
     };
 
-
     private static int identificacao_Sequencial = 0;
-
 
     public String getNome() {
         return nome;
