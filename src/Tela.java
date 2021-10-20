@@ -7,6 +7,7 @@ public class Tela extends JFrame implements ActionListener {
 
     private final int WIDTH = 1080, HEIGHT = 720;
     JButton botaoCliente = new JButton("Cliente");
+    JButton botaoFuncionario = new JButton("Funcionario");
 
     public Tela(){
         criaTela();
@@ -29,7 +30,9 @@ public class Tela extends JFrame implements ActionListener {
         Main.tela.add(botaoCliente);
         botaoCliente.addActionListener(this);
 
-
+        botaoFuncionario.setBounds(10,70,100,50);
+        Main.tela.add(botaoFuncionario);
+        botaoFuncionario.addActionListener(this);
     }
 
     @Override
