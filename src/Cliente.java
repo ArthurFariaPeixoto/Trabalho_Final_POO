@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.util.Arrays;
+
 public class Cliente extends Pessoa{
     
     private String cpf;
@@ -17,8 +20,17 @@ public class Cliente extends Pessoa{
         return forma_Pagamento[forma];
     }
 
+    @Override
+    public String toString() {
+        return "CPF: " + cpf +
+                ", nome: " + nome +
+                ", idade: " + idade;
+    }
 
     public Cliente() {
         identificacao_Sequencial += 1;
+        setNome(JOptionPane.showInputDialog("Nome Completo"));
+        setCpf(JOptionPane.showInputDialog("CPF"));
+        setIdade(Integer.parseInt(JOptionPane.showInputDialog("Idade")));
     }
 }

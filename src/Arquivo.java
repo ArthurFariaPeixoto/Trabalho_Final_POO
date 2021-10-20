@@ -16,10 +16,9 @@ public class Arquivo {
         }
     }
 
-    public void escreveArquivo(String tipo){
+    public void escreveArquivo(String tipo, String conteudo){
         Path diretorio = Paths.get(tipo+".txt");
-        String escrita = JOptionPane.showInputDialog("Cadastro de "+tipo);
-        byte[] escrita_emBytes = escrita.getBytes();
+        byte[] escrita_emBytes = conteudo.getBytes();
 
         try {
             Files.write(diretorio,escrita_emBytes);
