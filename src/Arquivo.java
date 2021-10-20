@@ -6,9 +6,6 @@ import java.nio.file.Paths;
 
 public class Arquivo {
 
-    public Arquivo() {
-    }
-
     public void criaArquivo(String tipo){
         Path diretorio = Paths.get(tipo+".txt");
 
