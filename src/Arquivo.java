@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-public class Arquivo {
+public class Arquivo{
 
     public void criaArquivo(String tipo){
         Path diretorio = Paths.get(tipo+".txt");

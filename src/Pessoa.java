@@ -16,7 +16,7 @@ public abstract class Pessoa {
         return dataNascimento;
     }
 
-    public void setIdade(String dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 }

@@ -11,8 +11,10 @@ public class Main extends JFrame implements ActionListener {
     private final int WIDTH = 1080, HEIGHT = 720;
 
     JButton botaoClienteCadastro = new JButton("Cadastro cliente");
-    JButton botaoFuncionario = new JButton("Funcionario");
     JButton botaoClienteRetorno = new JButton("Lista de Clientes");
+
+    JButton botaoFuncionarioCadastro = new JButton("Cadastro de funcionário");
+    JButton botaoFuncionarioRetorno = new JButton("Lista de Funcionários");
 
     static Arquivo arquivo = new Arquivo();
     static List<Cliente> listaCLientes;
@@ -34,6 +36,7 @@ public class Main extends JFrame implements ActionListener {
 
 
     public void criaTela(){
+
         setLayout(null);
 
         tela.setSize(WIDTH, HEIGHT);
@@ -50,14 +53,17 @@ public class Main extends JFrame implements ActionListener {
         tela.add(botaoClienteCadastro);
         botaoClienteCadastro.addActionListener(this);
 
-        botaoFuncionario.setBounds(10,70,150,50);
-        tela.add(botaoFuncionario);
-        botaoFuncionario.addActionListener(this);
-
         botaoClienteRetorno.setBounds(170,10,150,50);
         tela.add(botaoClienteRetorno);
         botaoClienteRetorno.addActionListener(this);
 
+        botaoFuncionarioCadastro.setBounds(10,70,150,50);
+        tela.add(botaoFuncionarioCadastro);
+        botaoFuncionarioCadastro.addActionListener(this);
+
+        botaoFuncionarioRetorno.setBounds( 170, 70, 150, 50);
+        tela.add(botaoFuncionarioRetorno);
+        botaoFuncionarioRetorno.addActionListener(this);
     }
 
 
@@ -68,8 +74,16 @@ public class Main extends JFrame implements ActionListener {
             listaCLientes.add(cliente);
             arquivo.escreveArquivo("Cliente", listaCLientes.toString());
         }
-        else if(e.getSource() == botaoClienteRetorno){
+        if(e.getSource() == botaoClienteRetorno){
             arquivo.leArquivo("Cliente");
+        }
+        if(e.getSource() == botaoFuncionarioCadastro){
+            Funcionario funcionario = new Funcionario();
+            listaFuncionarios.add(funcionario);
+            arquivo.escreveArquivo("Funcionario", listaFuncionarios.toString());
+        }
+        if(e.getSource() == botaoFuncionarioRetorno){
+            arquivo.leArquivo("Funcionario");
         }
 
     }

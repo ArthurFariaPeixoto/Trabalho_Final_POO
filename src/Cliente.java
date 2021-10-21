@@ -30,6 +30,6 @@ public class Cliente extends Pessoa{
         identificacao_Sequencial += 1;
         setNome(JOptionPane.showInputDialog("Nome Completo"));
         setCpf(JOptionPane.showInputDialog("CPF"));
-        setIdade(JOptionPane.showInputDialog("Data de nascimento"));
+        setDataNascimento(JOptionPane.showInputDialog("Data de nascimento"));
     }
 }

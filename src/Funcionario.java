@@ -1,9 +1,12 @@
+import javax.swing.*;
+import java.util.Arrays;
+
 public class Funcionario extends Pessoa{
 
     private double salario;
     private int horas_semanais;
-    private double bonificacao;
-    private int vendas;
+    private double bonificacao=0;
+    private int vendas=0;
     private final String[] avaliacao = {"Pessima","Ruim","Regular","Bom", "Excelente"};
 
     private static int identificacao_Sequencial = 0;
@@ -45,7 +48,21 @@ public class Funcionario extends Pessoa{
         this.vendas = vendas;
     }
 
+    @Override
+    public String toString() {
+        return "Nome: " + getNome() +
+                ", Data de nascimento: " + getDataNascimento() +
+                ", Vendas: " + getVendas() +
+                ", Horas semanais: " + getHoras_semanais() +
+                ", Bonificacao: " + getBonificacao() +
+                ", Salario: " + getSalario();
+    }
+
     public Funcionario() {
         identificacao_Sequencial += 1;
+        setNome(JOptionPane.showInputDialog("Nome Completo"));
+        setDataNascimento(JOptionPane.showInputDialog("Data de nascimento"));
+        setHoras_semanais(Integer.parseInt(JOptionPane.showInputDialog("Horas semanais de serviço")));
+        setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário base")));
     }
 }

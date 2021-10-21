@@ -4,6 +4,7 @@ public class Produto {
     private double preco;
     private double desconto;
     private String codigo;
+    private int quantidade;
     private final String[] tarja = {"MIP", "Amarela", "Vermelha", "Preta"
     //MIP = Medicamentos Isentos de Prescrição (livre)
     //Amarela = Generico
@@ -11,6 +12,13 @@ public class Produto {
     //Preta = precisam de um maior controle e cuidado na hora de receita
     };
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
     private static int identificacao_Sequencial = 0;
 
     public String getNome() {
