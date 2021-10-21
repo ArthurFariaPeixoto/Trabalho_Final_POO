@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class Arquivo {
 
@@ -21,7 +22,7 @@ public class Arquivo {
         byte[] escrita_emBytes = conteudo.getBytes();
 
         try {
-            Files.write(diretorio,escrita_emBytes);
+            Files.write(diretorio,escrita_emBytes, StandardOpenOption.APPEND);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -33,7 +34,7 @@ public class Arquivo {
         try {
             byte[] conteudo = Files.readAllBytes(diretorio);
             String leitura = new String(conteudo);
-            JOptionPane.showMessageDialog(null, leitura);
+            JOptionPane.showMessageDialog(null, leitura.split("]"));
         }
         catch (IOException e) {
             e.printStackTrace();

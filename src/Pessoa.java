@@ -1,7 +1,7 @@
 public abstract class Pessoa {
 
     protected String nome;
-    protected int idade;
+    protected String dataNascimento;
 
 
     public String getNome() {
@@ -12,11 +12,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setIdade(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }

@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends JFrame implements ActionListener {
 
@@ -12,7 +14,10 @@ public class Main extends JFrame implements ActionListener {
     JButton botaoFuncionario = new JButton("Funcionario");
     JButton botaoClienteRetorno = new JButton("Lista de Clientes");
 
-    Arquivo arquivo = new Arquivo();
+    static Arquivo arquivo = new Arquivo();
+    static List<Cliente> listaCLientes;
+    static List<Produto> listaProdutos;
+    static List<Funcionario> listaFuncionarios ;
 
 
     public Main(){
@@ -21,6 +26,9 @@ public class Main extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
+        listaCLientes = new ArrayList<Cliente>();
+        listaProdutos = new ArrayList<Produto>();
+        listaFuncionarios = new ArrayList<Funcionario>();
         Main main = new Main();
     }
 
@@ -57,7 +65,8 @@ public class Main extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == botaoClienteCadastro){
             Cliente cliente = new Cliente();
-            arquivo.escreveArquivo("Cliente", cliente.toString());
+            listaCLientes.add(cliente);
+            arquivo.escreveArquivo("Cliente", listaCLientes.toString());
         }
         else if(e.getSource() == botaoClienteRetorno){
             arquivo.leArquivo("Cliente");

@@ -21,15 +21,15 @@ public class Cliente extends Pessoa{
 
     @Override
     public String toString() {
-        return "CPF: " + getCpf() +
-                ", nome: " + getNome() +
-                ", idade: " + getIdade();
+        return  "Nome: " + getNome() +
+                ", CPF: " + getCpf() +
+                ", Data de nascimento: " + getDataNascimento();
     }
 
     public Cliente() {
         identificacao_Sequencial += 1;
         setNome(JOptionPane.showInputDialog("Nome Completo"));
         setCpf(JOptionPane.showInputDialog("CPF"));
-        setIdade(Integer.parseInt(JOptionPane.showInputDialog("Idade")));
+        setIdade(JOptionPane.showInputDialog("Data de nascimento"));
     }
 }
