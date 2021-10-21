@@ -9,6 +9,7 @@ public class Tela extends JFrame implements ActionListener {
     JButton botaoClienteCadastro = new JButton("Cadastro cliente");
     JButton botaoFuncionario = new JButton("Funcionario");
     JButton botaoClienteRetorno = new JButton("Lista de Clientes");
+
     Arquivo arquivo = new Arquivo();
 
     public Tela(){
@@ -39,6 +40,7 @@ public class Tela extends JFrame implements ActionListener {
         botaoClienteRetorno.setBounds(170,10,150,50);
         Main.tela.add(botaoClienteRetorno);
         botaoClienteRetorno.addActionListener(this);
+
     }
 
     @Override

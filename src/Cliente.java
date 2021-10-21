@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.util.Arrays;
 
 public class Cliente extends Pessoa{
     
@@ -22,9 +21,9 @@ public class Cliente extends Pessoa{
 
     @Override
     public String toString() {
-        return "CPF: " + cpf +
-                ", nome: " + nome +
-                ", idade: " + idade;
+        return "CPF: " + getCpf() +
+                ", nome: " + getNome() +
+                ", idade: " + getIdade();
     }
 
     public Cliente() {
