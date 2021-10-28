@@ -24,6 +24,7 @@ public class Produto {
     public Produto() {
         identificacao_Sequencial+=1;
         setNome(JOptionPane.showInputDialog("Nome do remédio"));
+        setCodigo(JOptionPane.showInputDialog("Código do produto"));
         setQuantidade(Integer.parseInt(JOptionPane.showInputDialog("Quantidade em estoque")));
         setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
         setDesconto(Double.parseDouble(JOptionPane.showInputDialog("Desconto")));
@@ -94,7 +95,7 @@ public class Produto {
                 ", Preço: " + getPreco() +
                 ", Desconto: " + getDesconto() +
                 ", Preço com desconto: " + getPrecoDesconto() +
-                ", Codigo: " + getCodigo() +
+                ", Codigo do produto: " + getCodigo() +
                 ", Quantidade em estoque: " + getQuantidade() +
                 ", Tarja: " + getTarja();
     }

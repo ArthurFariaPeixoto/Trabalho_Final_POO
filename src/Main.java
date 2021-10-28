@@ -83,17 +83,17 @@ public class Main extends JFrame implements ActionListener {
         if(e.getSource() == botaoFuncionarioCadastro){
             Funcionario funcionario = new Funcionario();
             listaFuncionarios.add(funcionario);
-            arquivo.escreveArquivo("Funcionario", listaFuncionarios.toString());
+            arquivo.escreveArquivo("Funcionario", funcionario.toString());
         }
         if(e.getSource() == botaoClienteCadastro){
             Cliente cliente = new Cliente();
             listaCLientes.add(cliente);
-            arquivo.escreveArquivo("Cliente", listaCLientes.toString());
+            arquivo.escreveArquivo("Cliente", cliente.toString());
         }
         if(e.getSource() == botaoProdutoCadastro){
             Produto produto = new Produto();
             listaProdutos.add(produto);
-            arquivo.escreveArquivo("Produto", listaProdutos.toString());
+            arquivo.escreveArquivo("Produto", produto.toString());
         }
         if(e.getSource() == botaoClienteRetorno){
             arquivo.leArquivo("Cliente");
