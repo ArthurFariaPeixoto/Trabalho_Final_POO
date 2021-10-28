@@ -8,6 +8,7 @@ public class Produto {
     private double desconto;
     private String codigo;
     private int quantidade;
+    private int tarjacodigo;
 
 
     private double precoDesconto;
@@ -27,6 +28,7 @@ public class Produto {
         setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
         setDesconto(Double.parseDouble(JOptionPane.showInputDialog("Desconto")));
         setPrecoDesconto();
+        setTarja(Integer.parseInt(JOptionPane.showInputDialog("Tarja\n0: MIP\n 1: Amarel\n 2:Vermelha\n 3:Preta")));
 
     }
 
@@ -78,8 +80,11 @@ public class Produto {
         this.codigo = codigo;
     }
 
-    public String getTarja(int Tarja){
-        return tarja[Tarja];
+    public String getTarja(){
+        return tarja[this.tarjacodigo];
+    }
+    public void setTarja(int Tarja){
+        this.tarjacodigo = Tarja;
     }
 
 
@@ -90,7 +95,7 @@ public class Produto {
                 ", Desconto: " + getDesconto() +
                 ", Preço com desconto: " + getPrecoDesconto() +
                 ", Codigo: " + getCodigo() +
-                ", Quantidade em estoque:" + getQuantidade() +
-                ", Tarja: " + Arrays.toString(tarja);
+                ", Quantidade em estoque: " + getQuantidade() +
+                ", Tarja: " + getTarja();
     }
 }

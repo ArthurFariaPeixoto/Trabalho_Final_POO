@@ -7,7 +7,8 @@ public class Funcionario extends Pessoa{
     private int horas_semanais;
     private double bonificacao=0;
     private int vendas=0;
-    private final String[] avaliacao = {"Pessima","Ruim","Regular","Bom", "Excelente"};
+    private int rendimentoNota;
+    private final String[] rendimento = {"Pessima","Ruim","Regular","Bom", "Excelente"};
 
     private static int identificacao_Sequencial = 0;
 
@@ -36,8 +37,11 @@ public class Funcionario extends Pessoa{
         this.bonificacao = (bonificacao/100) * getVendas();
     }
 
-    public String avaliacaoFuncionario(int nota){
-        return avaliacao[nota];
+    public String rendimentoFuncionario(){
+        return rendimento[rendimentoNota];
+    }
+    public void setRendimento(int nota){
+        this.rendimentoNota = nota;
     }
 
     public int getVendas() {
@@ -55,14 +59,18 @@ public class Funcionario extends Pessoa{
                 ", Vendas: " + getVendas() +
                 ", Horas semanais: " + getHoras_semanais() +
                 ", Bonificacao: " + getBonificacao() +
-                ", Salario: " + getSalario();
+                ", Salario: " + getSalario() +
+                ", Rendimento do funcionario: " + rendimentoFuncionario();
     }
 
     public Funcionario() {
         identificacao_Sequencial += 1;
+        setBonificacao(5);
         setNome(JOptionPane.showInputDialog("Nome Completo"));
         setDataNascimento(JOptionPane.showInputDialog("Data de nascimento"));
         setHoras_semanais(Integer.parseInt(JOptionPane.showInputDialog("Horas semanais de serviço")));
         setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário base")));
+        setRendimento(Integer.parseInt(JOptionPane.showInputDialog("Rendimento do funcionario")));
+        setVendas(Integer.parseInt(JOptionPane.showInputDialog("Quantidade de vendas")));
     }
 }
