@@ -16,6 +16,9 @@ public class Main extends JFrame implements ActionListener {
     JButton botaoFuncionarioCadastro = new JButton("Cadastro de funcionário");
     JButton botaoFuncionarioRetorno = new JButton("Lista de Funcionários");
 
+    JButton botaoProdutoCadastro = new JButton("Cadastro de produto");
+    JButton botaoProdutoRetorno = new JButton("Lista de Produtos");
+
     static Arquivo arquivo = new Arquivo();
     static List<Cliente> listaCLientes;
     static List<Produto> listaProdutos;
@@ -49,41 +52,57 @@ public class Main extends JFrame implements ActionListener {
         tela.setResizable(false);
         tela.getContentPane().setBackground(Color.BLACK);
 
-        botaoClienteCadastro.setBounds(10,10,150,50);
         tela.add(botaoClienteCadastro);
+        botaoClienteCadastro.setBounds(10,10,150,50);
         botaoClienteCadastro.addActionListener(this);
 
-        botaoClienteRetorno.setBounds(170,10,150,50);
         tela.add(botaoClienteRetorno);
+        botaoClienteRetorno.setBounds(170,10,150,50);
         botaoClienteRetorno.addActionListener(this);
 
-        botaoFuncionarioCadastro.setBounds(10,70,150,50);
         tela.add(botaoFuncionarioCadastro);
+        botaoFuncionarioCadastro.setBounds(10,70,150,50);
         botaoFuncionarioCadastro.addActionListener(this);
 
-        botaoFuncionarioRetorno.setBounds( 170, 70, 150, 50);
         tela.add(botaoFuncionarioRetorno);
+        botaoFuncionarioRetorno.setBounds( 170, 70, 150, 50);
         botaoFuncionarioRetorno.addActionListener(this);
+
+        tela.add(botaoProdutoCadastro);
+        botaoProdutoCadastro.setBounds(10, 130, 150, 50);
+        botaoProdutoCadastro.addActionListener(this);
+
+        tela.add(botaoProdutoRetorno);
+        botaoProdutoRetorno.setBounds(170, 130, 150, 50);
+        botaoProdutoRetorno.addActionListener(this);
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == botaoClienteCadastro){
-            Cliente cliente = new Cliente();
-            listaCLientes.add(cliente);
-            arquivo.escreveArquivo("Cliente", listaCLientes.toString());
-        }
-        if(e.getSource() == botaoClienteRetorno){
-            arquivo.leArquivo("Cliente");
-        }
         if(e.getSource() == botaoFuncionarioCadastro){
             Funcionario funcionario = new Funcionario();
             listaFuncionarios.add(funcionario);
             arquivo.escreveArquivo("Funcionario", listaFuncionarios.toString());
         }
+        if(e.getSource() == botaoClienteCadastro){
+            Cliente cliente = new Cliente();
+            listaCLientes.add(cliente);
+            arquivo.escreveArquivo("Cliente", listaCLientes.toString());
+        }
+        if(e.getSource() == botaoProdutoCadastro){
+            Produto produto = new Produto();
+            listaProdutos.add(produto);
+            arquivo.escreveArquivo("Produto", listaProdutos.toString());
+        }
+        if(e.getSource() == botaoClienteRetorno){
+            arquivo.leArquivo("Cliente");
+        }
         if(e.getSource() == botaoFuncionarioRetorno){
             arquivo.leArquivo("Funcionario");
+        }
+        if(e.getSource() == botaoProdutoRetorno){
+            arquivo.leArquivo("Produto");
         }
 
     }
