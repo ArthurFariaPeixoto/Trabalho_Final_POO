@@ -70,7 +70,7 @@ public class Funcionario extends Pessoa{
         setDataNascimento(JOptionPane.showInputDialog("Data de nascimento"));
         setHoras_semanais(Integer.parseInt(JOptionPane.showInputDialog("Horas semanais de serviço")));
         setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário base")));
-        setRendimento(Integer.parseInt(JOptionPane.showInputDialog("Rendimento do funcionario")));
+        setRendimento(Integer.parseInt(JOptionPane.showInputDialog("Rendimento do funcionario\n 0: Pessima\n 1: Ruim\n 2:Regular\n 3:Bom\n 4:Excelente")));
         setVendas(Integer.parseInt(JOptionPane.showInputDialog("Quantidade de vendas")));
     }
 }

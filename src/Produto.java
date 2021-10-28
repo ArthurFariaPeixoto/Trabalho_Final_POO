@@ -29,7 +29,7 @@ public class Produto {
         setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
         setDesconto(Double.parseDouble(JOptionPane.showInputDialog("Desconto")));
         setPrecoDesconto();
-        setTarja(Integer.parseInt(JOptionPane.showInputDialog("Tarja\n0: MIP\n 1: Amarel\n 2:Vermelha\n 3:Preta")));
+        setTarja(Integer.parseInt(JOptionPane.showInputDialog("Tarja\n0: MIP\n 1: Amarela\n 2:Vermelha\n 3:Preta")));
 
     }
 

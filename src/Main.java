@@ -8,7 +8,6 @@ import java.util.List;
 public class Main extends JFrame implements ActionListener {
 
     private JFrame tela = new JFrame();
-    private final int WIDTH = 1080, HEIGHT = 720;
 
     JButton botaoClienteCadastro = new JButton("Cadastro cliente");
     JButton botaoClienteRetorno = new JButton("Lista de Clientes");
@@ -34,14 +33,15 @@ public class Main extends JFrame implements ActionListener {
         listaCLientes = new ArrayList<Cliente>();
         listaProdutos = new ArrayList<Produto>();
         listaFuncionarios = new ArrayList<Funcionario>();
-        Main main = new Main();
+        new Main();
     }
 
 
     public void criaTela(){
+        final int WIDTH = 1080;
+        final int HEIGHT = 720;
 
         setLayout(null);
-
         tela.setSize(WIDTH, HEIGHT);
         tela.setTitle("Gerenciamento de Farmácia");
         tela.setVisible(true);
