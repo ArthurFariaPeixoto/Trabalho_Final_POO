@@ -3,7 +3,6 @@ import javax.swing.*;
 public class Cliente extends Pessoa{
     
     private String cpf;
-    private final String[] forma_Pagamento = {"Débito","Crédito","Espécie","Cheque"};
 
     private static int identificacao_Sequencial = 0;
 
@@ -13,10 +12,6 @@ public class Cliente extends Pessoa{
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getForma_Pagamento(int forma) {
-        return forma_Pagamento[forma];
     }
 
     @Override
