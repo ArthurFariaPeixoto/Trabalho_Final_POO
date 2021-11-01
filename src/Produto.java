@@ -9,6 +9,7 @@ public class Produto {
     private String codigo;
     private int quantidade;
     private int tarjacodigo;
+    private TipoProduto tipo;
 
 
     private double precoDesconto;
@@ -97,6 +98,6 @@ public class Produto {
                 ", Preço com desconto: " + getPrecoDesconto() +
                 ", Codigo do produto: " + getCodigo() +
                 ", Quantidade em estoque: " + getQuantidade() +
-                ", Tarja: " + getTarja();
+                ", Tipo: " + tipo.getDescricao();
     }
 }

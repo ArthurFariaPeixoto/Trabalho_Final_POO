@@ -19,6 +19,12 @@ public class Main extends JFrame implements ActionListener {
     JButton botaoProdutoRetorno = new JButton("Lista de Produtos");
 
     static Arquivo arquivo = new Arquivo();
+
+    static DB<Cliente> arquivoClientes = new ArquivoDB<>("Cliente");
+    static DB<Funcionario> arquivoFuncionarios = new ArquivoDB<>("Funcionario");
+    static DB<Produto> arquivoProdutos = new ArquivoDB<>("Produto");
+
+    static Integer idSequencialCliente = 0; //TODO ler na abertura do programa
     static List<Cliente> listaCLientes;
     static List<Produto> listaProdutos;
     static List<Funcionario> listaFuncionarios ;
@@ -54,7 +60,7 @@ public class Main extends JFrame implements ActionListener {
 
         tela.add(botaoClienteCadastro);
         botaoClienteCadastro.setBounds(10,10,150,50);
-        botaoClienteCadastro.addActionListener(this);
+        botaoClienteCadastro.addActionListener(new ClienteListener());
 
         tela.add(botaoClienteRetorno);
         botaoClienteRetorno.setBounds(170,10,150,50);
@@ -86,9 +92,17 @@ public class Main extends JFrame implements ActionListener {
             arquivo.escreveArquivo("Funcionario", funcionario.toString());
         }
         if(e.getSource() == botaoClienteCadastro){
-            Cliente cliente = new Cliente();
-            listaCLientes.add(cliente);
-            arquivo.escreveArquivo("Cliente", cliente.toString());
+            String nomeCompleto = JOptionPane.showInputDialog("Nome Completo");
+            String cpf = JOptionPane.showInputDialog("CPF");
+            String dataDeNascimento = JOptionPane.showInputDialog("Data de nascimento");
+
+            if (!isEmpty(nomeCompleto) && !isEmpty(cpf) && !isEmpty(dataDeNascimento)) {
+                Cliente cliente = new Cliente(++idSequencialCliente, nomeCompleto, cpf, dataDeNascimento);
+                listaCLientes.add(cliente);
+                arquivo.escreveArquivo("Cliente", cliente.toString() + "\n");
+
+                arquivoClientes.salvar(cliente);
+            }
         }
         if(e.getSource() == botaoProdutoCadastro){
             Produto produto = new Produto();
@@ -105,5 +119,10 @@ public class Main extends JFrame implements ActionListener {
             arquivo.leArquivo("Produto");
         }
 
+        TipoProduto tipo = TipoProduto.MIP;
+    }
+
+    private static boolean isEmpty(String string) {
+        return string == null || string.trim().isEmpty();
     }
 }

@@ -1,8 +1,8 @@
 public abstract class Pessoa {
 
+    protected Integer id;
     protected String nome;
     protected String dataNascimento;
-
 
     public String getNome() {
         return nome;
