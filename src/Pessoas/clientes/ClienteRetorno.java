@@ -8,6 +8,6 @@ import java.awt.event.ActionListener;
 public class ClienteRetorno implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.arquivo.leArquivo("Pessoas.clientes.Cliente");
+        Main.arquivo.leArquivo("Cliente");
     }
 }

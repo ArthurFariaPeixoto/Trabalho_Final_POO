@@ -21,7 +21,7 @@ public class CadastroProdutoListener implements ActionListener {
         if (nomeCompleto != null && !nomeCompleto.equals(" ") && codigo != null && !codigo.equals(" ") && quantidade!= 0 && preco != 0) {
             Produto produto = new Produto(nomeCompleto, codigo, quantidade, preco, desconto, tarja);
             Main.listaProdutos.add(produto);
-            Main.arquivo.escreveArquivo("Produtos.Produto", produto.toString() + "\n");
+            Main.arquivo.escreveArquivo("Produto", produto.toString() + "\n");
         }
         else{
             JOptionPane.showMessageDialog(null,erro);

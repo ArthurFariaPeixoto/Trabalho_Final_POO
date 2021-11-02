@@ -8,6 +8,6 @@ import java.awt.event.ActionListener;
 public class ExcluiListaFuncionario implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.arquivo.deletaArquivo("Pessoas.funcionarios.Funcionario");
+        Main.arquivo.deletaArquivo("Funcionario");
     }
 }

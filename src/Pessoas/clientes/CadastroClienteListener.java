@@ -19,7 +19,7 @@ public class CadastroClienteListener implements ActionListener {
         if (nomeCompleto != null && !nomeCompleto.equals(" ") && cpf != null && !cpf.equals(" ") && dataDeNascimento != null && !dataDeNascimento.equals(" ")) {
             Cliente cliente = new Cliente(++Main.sequencialCliente, nomeCompleto, cpf, dataDeNascimento);
             Main.listaCLientes.add(cliente);
-            Main.arquivo.escreveArquivo("Pessoas.clientes.Cliente", cliente.toString() + "\n");
+            Main.arquivo.escreveArquivo("Cliente", cliente.toString() + "\n");
         }
         else{
             JOptionPane.showMessageDialog(null,erro);

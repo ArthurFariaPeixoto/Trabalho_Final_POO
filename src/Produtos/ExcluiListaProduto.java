@@ -8,6 +8,6 @@ import java.awt.event.ActionListener;
 public class ExcluiListaProduto implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.arquivo.deletaArquivo("Produtos.Produto");
+        Main.arquivo.deletaArquivo("Produto");
     }
 }
