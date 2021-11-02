@@ -1,3 +1,19 @@
+package Main;
+
+import BD.Arquivo;
+import Pessoas.clientes.CadastroClienteListener;
+import Pessoas.clientes.Cliente;
+import Pessoas.clientes.ClienteRetorno;
+import Pessoas.clientes.ExcluiListaCliente;
+import Pessoas.funcionarios.CadastroFuncionarioListener;
+import Pessoas.funcionarios.ExcluiListaFuncionario;
+import Pessoas.funcionarios.Funcionario;
+import Pessoas.funcionarios.FuncionarioRetorno;
+import Produtos.CadastroProdutoListener;
+import Produtos.ExcluiListaProduto;
+import Produtos.Produto;
+import Produtos.ProdutoRetorno;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,10 +37,10 @@ public class Main extends JFrame implements ActionListener {
     JButton botaoProdutoRetorno = new JButton("Lista de Produtos");
     JButton botaoProdutoExclui = new JButton("Deletar lista de Produtos");
 
-    static Arquivo arquivo = new Arquivo();
-    static List<Cliente> listaCLientes;
-    static List<Produto> listaProdutos;
-    static List<Funcionario> listaFuncionarios;
+    public static Arquivo arquivo = new Arquivo();
+    public static List<Cliente> listaCLientes;
+    public static List<Produto> listaProdutos;
+    public static List<Funcionario> listaFuncionarios;
     public static int sequencialCliente=0;
     public static int sequencialFuncionario=0;
 

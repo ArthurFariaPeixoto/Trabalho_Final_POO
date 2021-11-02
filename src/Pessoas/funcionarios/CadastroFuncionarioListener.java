@@ -1,3 +1,9 @@
+package Pessoas.funcionarios;
+
+import Main.Main;
+import Pessoas.funcionarios.Funcionario;
+import TratamentoErro.CadastroInvalidoException;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +23,7 @@ public class CadastroFuncionarioListener implements ActionListener {
         if (nomeCompleto != null && !nomeCompleto.equals(" ") && salario!= 0 && vendas != 0 && horas != 0 && dataDeNascimento != null && !dataDeNascimento.equals(" ")) {
             Funcionario funcionario = new Funcionario(++Main.sequencialFuncionario, nomeCompleto, dataDeNascimento, horas, vendas, salario);
             Main.listaFuncionarios.add(funcionario);
-            Main.arquivo.escreveArquivo("Funcionario", funcionario.toString() + "\n");
+            Main.arquivo.escreveArquivo("Pessoas.funcionarios.Funcionario", funcionario.toString() + "\n");
         }
         else{
             JOptionPane.showMessageDialog(null,erro);

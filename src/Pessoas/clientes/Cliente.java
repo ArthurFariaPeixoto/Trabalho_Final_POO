@@ -1,4 +1,8 @@
-public class Cliente extends Pessoa{
+package Pessoas.clientes;
+
+import Pessoas.Pessoa;
+
+public class Cliente extends Pessoa {
     
     private String cpf;
 
@@ -21,7 +25,7 @@ public class Cliente extends Pessoa{
         this.dataNascimento = dataNascimento;
     }
 
-    /*public Cliente() {
+    /*public Pessoas.clientes.Cliente() {
         identificacao_Sequencial += 1;
         setNome(JOptionPane.showInputDialog("Nome Completo"));
         setCpf(JOptionPane.showInputDialog("CPF"));

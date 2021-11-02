@@ -1,7 +1,8 @@
-import javax.swing.*;
-import java.util.Arrays;
+package Pessoas.funcionarios;
 
-public class Funcionario extends Pessoa{
+import Pessoas.Pessoa;
+
+public class Funcionario extends Pessoa {
 
     private double salario;
     private int horas_semanais;
@@ -76,7 +77,7 @@ public class Funcionario extends Pessoa{
         setSalario(salario);
     }
 
-    /*public Funcionario() {
+    /*public Pessoas.funcionarios.Funcionario() {
         identificacao_Sequencial += 1;
         setBonificacao(5);
         setNome(JOptionPane.showInputDialog("Nome Completo"));

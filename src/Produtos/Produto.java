@@ -1,3 +1,5 @@
+package Produtos;
+
 import javax.swing.*;
 
 public class Produto {
@@ -26,7 +28,7 @@ public class Produto {
         this.tarjacodigo = tarjacodigo;
     }
 
-    /*public Produto() {
+    /*public Produtos.Produto() {
         setNome(JOptionPane.showInputDialog("Nome do remédio"));
         setCodigo(JOptionPane.showInputDialog("Código do produto"));
         setQuantidade(Integer.parseInt(JOptionPane.showInputDialog("Quantidade em estoque")));

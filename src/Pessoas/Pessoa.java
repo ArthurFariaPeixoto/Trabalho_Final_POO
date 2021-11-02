@@ -1,3 +1,5 @@
+package Pessoas;
+
 public abstract class Pessoa {
 
     protected Integer identificacao_Sequencial;

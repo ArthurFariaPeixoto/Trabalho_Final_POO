@@ -1,3 +1,7 @@
+package Testes;
+
+import Pessoas.funcionarios.Funcionario;
+import Produtos.Produto;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,9 +24,9 @@ public class Tests {
     @Test
     public void erroNoCadastroCliente(){
         Funcionario fun = new Funcionario(0, "", "", 0, 0, 0);
-        if (fun.nome == null || fun.nome.equals(" ") || fun.getSalario() == 0 || fun.getVendas() == 0 || fun.getHoras_semanais() == 0 || fun.dataNascimento == null || fun.dataNascimento.equals(" ")) {
+        if (fun.getNome() == null || fun.getNome().equals(" ") || fun.getSalario() == 0 || fun.getVendas() == 0 || fun.getHoras_semanais() == 0 || fun.getDataNascimento() == null || fun.getDataNascimento().equals(" ")) {
             String expected = " ".trim();
-            assertEquals(expected, fun.nome.trim());
+            assertEquals(expected, fun.getNome().trim());
         }
     }
     @Test
