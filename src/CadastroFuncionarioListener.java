@@ -21,6 +21,7 @@ public class CadastroFuncionarioListener implements ActionListener {
         }
         else{
             JOptionPane.showMessageDialog(null,erro);
+            throw new CadastroInvalidoException(erro);
         }
     }
 }

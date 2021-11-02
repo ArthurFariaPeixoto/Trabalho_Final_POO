@@ -20,6 +20,7 @@ public class CadastroClienteListener implements ActionListener {
         }
         else{
             JOptionPane.showMessageDialog(null,erro);
+            throw new CadastroInvalidoException(erro);
         }
     }
 }

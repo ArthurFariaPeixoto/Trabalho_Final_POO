@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class CadastroProdutoListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        String erro = "Erro ao cadastrar cliente, tente novamente!";
+        String erro = "Erro ao cadastrar produto, tente novamente!";
         String nomeCompleto = JOptionPane.showInputDialog("Nome do remédio");
         String codigo = JOptionPane.showInputDialog("Código do produto");
         int quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantidade em estoque"));
@@ -20,6 +20,7 @@ public class CadastroProdutoListener implements ActionListener {
         }
         else{
             JOptionPane.showMessageDialog(null,erro);
+            throw new CadastroInvalidoException(erro);
         }
     }
 }
