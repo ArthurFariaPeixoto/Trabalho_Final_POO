@@ -5,12 +5,10 @@ public class Funcionario extends Pessoa{
 
     private double salario;
     private int horas_semanais;
-    private double bonificacao=0;
-    private int vendas=0;
+    private double bonificacao;
+    private int vendas;
     private int rendimentoNota;
     private final String[] rendimento = {"Pessimo","Ruim","Regular","Bom", "Excelente"};
-
-    private static int identificacao_Sequencial = 0;
 
 
     public double getSalario() {
@@ -25,10 +23,6 @@ public class Funcionario extends Pessoa{
         return horas_semanais;
     }
 
-    public void setHoras_semanais(int horas_semanais) {
-        this.horas_semanais = horas_semanais;
-    }
-
     public double getBonificacao() {
         return bonificacao;
     }
@@ -40,21 +34,30 @@ public class Funcionario extends Pessoa{
     public String rendimentoFuncionario(){
         return rendimento[rendimentoNota];
     }
-    public void setRendimento(int nota){
-        this.rendimentoNota = nota;
-    }
 
     public int getVendas() {
+        if(this.vendas<=5){
+            rendimentoNota = 0;
+        }
+        else if(this.vendas > 5 && this.vendas <= 10){
+            rendimentoNota = 1;
+        }
+        else if(this.vendas > 10 && this.vendas <= 15){
+            rendimentoNota = 2;
+        }
+        else if(this.vendas >15 && this.vendas <= 20){
+            rendimentoNota = 3;
+        }
+        else if(this.vendas>20){
+            rendimentoNota = 4;
+        }
         return vendas;
-    }
-
-    public void setVendas(int vendas) {
-        this.vendas = vendas;
     }
 
     @Override
     public String toString() {
-        return "Nome: " + getNome() +
+        return  "ID: "+identificacao_Sequencial+
+                ", Nome: " + getNome() +
                 ", Data de nascimento: " + getDataNascimento() +
                 ", Vendas: " + getVendas() +
                 ", Horas semanais: " + getHoras_semanais() +
@@ -63,7 +66,17 @@ public class Funcionario extends Pessoa{
                 ", Rendimento do funcionario: " + rendimentoFuncionario();
     }
 
-    public Funcionario() {
+    public Funcionario(Integer identificacao, String nome, String data, int horas_semanais, int vendas, double salario) {
+        identificacao_Sequencial = identificacao;
+        this.nome = nome;
+        this.dataNascimento = data;
+        this.horas_semanais = horas_semanais;
+        this.vendas = vendas;
+        setBonificacao(10);
+        setSalario(salario);
+    }
+
+    /*public Funcionario() {
         identificacao_Sequencial += 1;
         setBonificacao(5);
         setNome(JOptionPane.showInputDialog("Nome Completo"));
@@ -73,4 +86,5 @@ public class Funcionario extends Pessoa{
         setRendimento(Integer.parseInt(JOptionPane.showInputDialog("Rendimento do funcionario\n 0: Pessimo\n 1: Ruim\n 2:Regular\n 3:Bom\n 4:Excelente")));
         setVendas(Integer.parseInt(JOptionPane.showInputDialog("Quantidade de vendas")));
     }
+     */
 }
