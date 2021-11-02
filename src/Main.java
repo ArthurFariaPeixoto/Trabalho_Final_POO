@@ -11,12 +11,15 @@ public class Main extends JFrame implements ActionListener {
 
     JButton botaoClienteCadastro = new JButton("Cadastro cliente");
     JButton botaoClienteRetorno = new JButton("Lista de Clientes");
+    JButton botaoClienteExclui = new JButton("Deletar lista de Clientes");
 
     JButton botaoFuncionarioCadastro = new JButton("Cadastro de funcionário");
     JButton botaoFuncionarioRetorno = new JButton("Lista de Funcionários");
+    JButton botaoFuncionarioExclui = new JButton("Deletar lista de Funcionários");
 
     JButton botaoProdutoCadastro = new JButton("Cadastro de produto");
     JButton botaoProdutoRetorno = new JButton("Lista de Produtos");
+    JButton botaoProdutoExclui = new JButton("Deletar lista de Produtos");
 
     static Arquivo arquivo = new Arquivo();
     static List<Cliente> listaCLientes;
@@ -74,6 +77,19 @@ public class Main extends JFrame implements ActionListener {
         tela.add(botaoProdutoRetorno);
         botaoProdutoRetorno.setBounds(170, 130, 150, 50);
         botaoProdutoRetorno.addActionListener(new ProdutoRetorno());
+
+        tela.add(botaoClienteExclui);
+        botaoClienteExclui.setBounds(WIDTH-230,10, 200, 50);
+        botaoClienteExclui.addActionListener(new ExcluiListaCliente());
+
+        tela.add(botaoFuncionarioExclui);
+        botaoFuncionarioExclui.setBounds(WIDTH-230,70, 200, 50);
+        botaoFuncionarioExclui.addActionListener(new ExcluiListaFuncionario());
+
+        tela.add(botaoProdutoExclui);
+        botaoProdutoExclui.setBounds(WIDTH-230,130, 200, 50);
+        botaoProdutoExclui.addActionListener(new ExcluiListaProduto());
+
     }
 
 

@@ -24,12 +24,14 @@ public class Arquivo{
         try {
             Files.write(diretorio,escrita_emBytes, StandardOpenOption.APPEND);
         } catch (IOException e) {
-            e.printStackTrace();
+            criaArquivo(tipo);
+            escreveArquivo(tipo, conteudo);
         }
 
     }
     public void leArquivo(String tipo){
         Path diretorio = Paths.get(tipo+".txt");
+
 
         try {
             byte[] conteudo = Files.readAllBytes(diretorio);
@@ -37,7 +39,8 @@ public class Arquivo{
             JOptionPane.showMessageDialog(null, leitura.split("]"));
         }
         catch (IOException e) {
-            e.printStackTrace();
+            criaArquivo(tipo);
+            leArquivo(tipo);
         }
     }
     public void deletaArquivo(String tipo){
