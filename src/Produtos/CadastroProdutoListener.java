@@ -24,7 +24,6 @@ public class CadastroProdutoListener implements ActionListener {
             Main.arquivo.escreveArquivo("Produto", produto.toString() + "\n");
         }
         else{
-            JOptionPane.showMessageDialog(null,erro);
             throw new CadastroInvalidoException(erro);
         }
     }
