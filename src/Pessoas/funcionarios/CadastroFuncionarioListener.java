@@ -26,7 +26,6 @@ public class CadastroFuncionarioListener implements ActionListener {
             Main.arquivo.escreveArquivo("Funcionario", funcionario.toString() + "\n");
         }
         else{
-            JOptionPane.showMessageDialog(null,erro);
             throw new CadastroInvalidoException(erro);
         }
     }

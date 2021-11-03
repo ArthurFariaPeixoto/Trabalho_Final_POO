@@ -22,7 +22,7 @@ public class CadastroClienteListener implements ActionListener {
             Main.arquivo.escreveArquivo("Cliente", cliente.toString() + "\n");
         }
         else{
-            JOptionPane.showMessageDialog(null,erro);
+
             throw new CadastroInvalidoException(erro);
         }
     }
