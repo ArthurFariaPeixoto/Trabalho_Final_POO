@@ -1,5 +1,6 @@
 package Testes;
 
+import Pessoas.clientes.Cliente;
 import Pessoas.funcionarios.Funcionario;
 import Produtos.Produto;
 import org.junit.Test;
@@ -22,7 +23,7 @@ public class Tests {
         assertEquals("Excelente", expected);
     }
     @Test
-    public void erroNoCadastroCliente(){
+    public void funcionarioInvalido(){
         Funcionario fun = new Funcionario(0, "", "", 0, 0, 0);
         if (fun.getNome() == null || fun.getNome().equals(" ") || fun.getSalario() == 0 || fun.getVendas() == 0 || fun.getHoras_semanais() == 0 || fun.getDataNascimento() == null || fun.getDataNascimento().equals(" ")) {
             String expected = " ".trim();
@@ -36,5 +37,14 @@ public class Tests {
         Double atual = produto.getPrecoDesconto();
         assertEquals(expected, atual);
     }
+    @Test
+    public void clienteInvalido(){
+        Cliente cliente = new Cliente(0,"", "", "");
+        if(cliente.getNome().length() == 0 || cliente.getCpf().length() != 11|| cliente.getDataNascimento().length() == 0){
+            String expected = "";
+            assertEquals(expected, cliente.getNome().trim());
+        }
+    }
+
 
 }
