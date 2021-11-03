@@ -45,6 +45,14 @@ public class Tests {
             assertEquals(expected, cliente.getNome().trim());
         }
     }
+    @Test
+    public void produtoInvalido(){
+        Produto produto = new Produto("","", 0, 0, 0, 0);
+        if(produto.getNome().length() == 0 || produto.getCodigo().length() == 0|| produto.getQuantidade()== 0){
+            String expected = "";
+            assertEquals(expected, produto.getNome().trim());
+        }
+    }
 
 
 }
