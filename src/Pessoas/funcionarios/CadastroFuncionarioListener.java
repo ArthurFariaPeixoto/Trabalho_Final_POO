@@ -26,7 +26,7 @@ public class CadastroFuncionarioListener implements ActionListener {
             int vendas = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de vendas"));
             String erro = "Erro ao cadastrar funcionario, tente novamente!";
 
-            if (nomeCompleto != null && !nomeCompleto.equals(" ") && salario!= 0 && vendas != 0 && horas != 0 && dataDeNascimento != null && !dataDeNascimento.equals(" ")) {
+            if (nomeCompleto != null && !nomeCompleto.equals("") && salario > 0 && horas > 0 && dataDeNascimento != null && !dataDeNascimento.equals("")) {
                 Funcionario funcionario = new Funcionario(++Main.sequencialFuncionario, nomeCompleto, dataDeNascimento, horas, vendas, salario);
                 Main.listaFuncionarios.add(funcionario);
                 Main.arquivo.escreveArquivo("Funcionario", funcionario.toString() + "\n");
