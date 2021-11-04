@@ -18,10 +18,7 @@ public class CadastroFuncionarioListener implements ActionListener {
         String senha = JOptionPane.showInputDialog("Digite a senha:");
         String erroSenha = "Senha invalida, tente novamente!";
 
-        if(!Objects.equals(senha, "admin")){
-            throw new SenhaInvalidaException(erroSenha);
-        }
-        else{
+        if(Objects.equals(senha, "admin")){
             String nomeCompleto = JOptionPane.showInputDialog("Nome Completo");
             String dataDeNascimento = JOptionPane.showInputDialog("Data de nascimento");
             int horas = Integer.parseInt(JOptionPane.showInputDialog("Horas semanais de serviço"));
@@ -38,7 +35,9 @@ public class CadastroFuncionarioListener implements ActionListener {
                 throw new CadastroInvalidoException(erro);
             }
         }
-
+        else{
+            throw new SenhaInvalidaException(erroSenha);
+        }
 
     }
 }
