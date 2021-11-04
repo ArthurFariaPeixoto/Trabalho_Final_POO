@@ -76,16 +76,4 @@ public class Funcionario extends Pessoa {
         setBonificacao(10);
         setSalario(salario);
     }
-
-    /*public Pessoas.funcionarios.Funcionario() {
-        identificacao_Sequencial += 1;
-        setBonificacao(5);
-        setNome(JOptionPane.showInputDialog("Nome Completo"));
-        setDataNascimento(JOptionPane.showInputDialog("Data de nascimento"));
-        setHoras_semanais(Integer.parseInt(JOptionPane.showInputDialog("Horas semanais de serviço")));
-        setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário base")));
-        setRendimento(Integer.parseInt(JOptionPane.showInputDialog("Rendimento do funcionario\n 0: Pessimo\n 1: Ruim\n 2:Regular\n 3:Bom\n 4:Excelente")));
-        setVendas(Integer.parseInt(JOptionPane.showInputDialog("Quantidade de vendas")));
-    }
-     */
 }
