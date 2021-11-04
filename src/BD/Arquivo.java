@@ -38,7 +38,7 @@ public class Arquivo{
         try {
             byte[] conteudo = Files.readAllBytes(diretorio);
             String leitura = new String(conteudo);
-            JOptionPane.showMessageDialog(null, leitura.split("]"));
+            JOptionPane.showMessageDialog(null, leitura);
         }
         catch (IOException e) {
             criaArquivo(tipo);
