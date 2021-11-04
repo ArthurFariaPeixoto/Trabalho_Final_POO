@@ -29,18 +29,6 @@ public class Produto {
         this.tarjacodigo = tarjacodigo;
     }
 
-    /*public Produtos.Produto() {
-        setNome(JOptionPane.showInputDialog("Nome do remédio"));
-        setCodigo(JOptionPane.showInputDialog("Código do produto"));
-        setQuantidade(Integer.parseInt(JOptionPane.showInputDialog("Quantidade em estoque")));
-        setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-        setDesconto(Double.parseDouble(JOptionPane.showInputDialog("Desconto")));
-        setPrecoDesconto();
-        setTarja(Integer.parseInt(JOptionPane.showInputDialog("Tarja\n0: MIP\n 1: Amarela\n 2:Vermelha\n 3:Preta")));
-
-    }
-     */
-
     public double getPrecoDesconto() {
         return precoDesconto;
     }

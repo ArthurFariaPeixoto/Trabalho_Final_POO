@@ -27,12 +27,4 @@ public class Cliente extends Pessoa {
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
     }
-
-    /*public Pessoas.clientes.Cliente() {
-        identificacao_Sequencial += 1;
-        setNome(JOptionPane.showInputDialog("Nome Completo"));
-        setCpf(JOptionPane.showInputDialog("CPF"));
-        setDataNascimento(JOptionPane.showInputDialog("Data de nascimento"));
-    }
-     */
 }
