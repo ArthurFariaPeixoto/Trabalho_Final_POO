@@ -2,6 +2,9 @@ package Pessoas.clientes;
 
 import Pessoas.Pessoa;
 
+/**
+ * Classe de dados do cliente.
+ */
 public class Cliente extends Pessoa {
     
     private String cpf;

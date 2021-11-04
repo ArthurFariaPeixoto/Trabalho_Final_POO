@@ -21,6 +21,13 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  Classe Principal do trabalho final de POO.
+ *  Classe responsavel pela criação da JFrame e dos JButton.
+ *
+ * @see <a href="https://github.com/ArthurFariaPeixoto/Trabalho_Final_POO">GitHub do projeto</a>
+ * @since  1.0.0
+ */
 public class Main extends JFrame implements ActionListener {
 
     private JFrame tela = new JFrame();

@@ -7,7 +7,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Classe de testes usando o JUnit.
+ */
 public class Tests {
+    /**
+     * Método que confere se a lógica por trás do calculo de salários dos funcionários está correta.
+     */
     @Test
     public void salariototalFuncionario() {
 
@@ -16,12 +22,20 @@ public class Tests {
         Double atual = fun.getSalario();
         assertEquals(expected, atual);
     }
+
+    /**
+     * Método que confere se a lógica por trás do calculo de rendimento do funcionário está correta.
+     */
     @Test
     public void rendimentoFuncionario(){
         Funcionario fun = new Funcionario(0, "teste", "10/10/1990", 40, 21, 1000);
         String expected = fun.rendimentoFuncionario();
         assertEquals("Excelente", expected);
     }
+
+    /**
+     * Método que confere se pode ser criado um funcionário com valores inválidos.
+     */
     @Test
     public void funcionarioInvalido(){
         Funcionario fun = new Funcionario(0, "", "", 0, 0, 0);
@@ -30,13 +44,10 @@ public class Tests {
             assertEquals(expected, fun.getNome().trim());
         }
     }
-    @Test
-    public void descontoDoProduto(){
-        Produto produto = new Produto("teste", "teste", 50, 50, 4, 0);
-        Double expected = produto.getPreco()-produto.getDesconto();
-        Double atual = produto.getPrecoDesconto();
-        assertEquals(expected, atual);
-    }
+
+    /**
+     * Método que confere se pode ser criado um cliente com valores inválidos.
+     */
     @Test
     public void clienteInvalido(){
         Cliente cliente = new Cliente(0,"", "", "");
@@ -45,6 +56,10 @@ public class Tests {
             assertEquals(expected, cliente.getNome().trim());
         }
     }
+
+    /**
+     * Método que confere se pode ser criado um produto com valores inválidos.
+     */
     @Test
     public void produtoInvalido(){
         Produto produto = new Produto("","", 0, 0, 0, 0);
@@ -54,6 +69,14 @@ public class Tests {
         }
     }
 
-
-
+    /**
+     * Método que confere se a lógica por trás do calculo de desconto do produto está certa.
+     */
+    @Test
+    public void descontoDoProduto(){
+        Produto produto = new Produto("teste", "teste", 50, 50, 4, 0);
+        Double expected = produto.getPreco()-produto.getDesconto();
+        Double atual = produto.getPrecoDesconto();
+        assertEquals(expected, atual);
+    }
 }

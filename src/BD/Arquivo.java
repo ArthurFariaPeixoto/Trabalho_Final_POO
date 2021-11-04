@@ -7,8 +7,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+/**
+ * Classe responsavel pelo tratamento de arquivos.
+ */
 public class Arquivo{
 
+    /**
+     * Método que cria o arquivo desejado caso ele não exista.
+     * @since 1.0.0
+     * @param tipo String
+     */
     public void criaArquivo(String tipo){
         Path diretorio = Paths.get(tipo+".txt");
 
@@ -19,6 +27,11 @@ public class Arquivo{
         }
     }
 
+    /**
+     * Método que preenche o arquivo desejado com as informações digitadas.
+     * @param tipo String
+     * @param conteudo String
+     */
     public void escreveArquivo(String tipo, String conteudo){
         Path diretorio = Paths.get(tipo+".txt");
         byte[] escrita_emBytes = conteudo.getBytes();
@@ -31,6 +44,11 @@ public class Arquivo{
         }
 
     }
+
+    /**
+     * Método que imprime o arquivo na tela para a leitura.
+     * @param tipo String
+     */
     public void leArquivo(String tipo){
         Path diretorio = Paths.get(tipo+".txt");
 
@@ -45,6 +63,11 @@ public class Arquivo{
             leArquivo(tipo);
         }
     }
+
+    /**
+     * Método que exclui o arquivo inteiro.
+     * @param tipo String
+     */
     public void deletaArquivo(String tipo){
         Path diretorio = Paths.get(tipo+".txt");
 

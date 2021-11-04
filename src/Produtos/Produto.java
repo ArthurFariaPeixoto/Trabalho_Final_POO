@@ -1,7 +1,8 @@
 package Produtos;
 
-import javax.swing.*;
-
+/**
+ * Classe de dados do produto.
+ */
 public class Produto {
 
     private String nome;

@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Classe responsável pela leitura de dados informada pelo usuario e pela criação de um novo cliente que logo é registrado no arquivo.
+ */
 public class CadastroClienteListener implements ActionListener {
 
     @Override

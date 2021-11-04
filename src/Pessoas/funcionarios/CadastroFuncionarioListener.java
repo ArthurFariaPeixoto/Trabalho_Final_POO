@@ -1,13 +1,15 @@
 package Pessoas.funcionarios;
 
 import Main.Main;
-import Pessoas.funcionarios.Funcionario;
 import TratamentoErro.CadastroInvalidoException;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Classe responsável pela leitura de dados informada pelo usuario e pela criação de um novo funcionário que logo é registrado no arquivo.
+ */
 public class CadastroFuncionarioListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -15,7 +17,6 @@ public class CadastroFuncionarioListener implements ActionListener {
         String dataDeNascimento = JOptionPane.showInputDialog("Data de nascimento");
         int horas = Integer.parseInt(JOptionPane.showInputDialog("Horas semanais de serviço"));
         double salario = Double.parseDouble(JOptionPane.showInputDialog("Salário base"));
-        //int rendimento = Integer.parseInt(JOptionPane.showInputDialog("Rendimento do funcionario\n 0: Pessimo\n 1: Ruim\n 2:Regular\n 3:Bom\n 4:Excelente"));
         int vendas = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de vendas"));
         String erro = "Erro ao cadastrar funcionario, tente novamente!";
 

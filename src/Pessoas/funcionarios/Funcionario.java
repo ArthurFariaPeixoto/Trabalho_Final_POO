@@ -2,6 +2,9 @@ package Pessoas.funcionarios;
 
 import Pessoas.Pessoa;
 
+/**
+ * Classe de dados do funcionário.
+ */
 public class Funcionario extends Pessoa {
 
     private double salario;
