@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class Tests {
     /**
-     * Método que confere se a lógica por trás do calculo de salários dos funcionários está correta.
+     * Metodo que confere se a logica por tras do calculo de salarios dos funcionarios esta correta.
      */
     @Test
     public void salariototalFuncionario() {
@@ -24,7 +24,7 @@ public class Tests {
     }
 
     /**
-     * Método que confere se a lógica por trás do calculo de rendimento do funcionário está correta.
+     * Metodo que confere se a logica por tras do calculo de rendimento do funcionario esta correta.
      */
     @Test
     public void rendimentoFuncionario(){
@@ -34,7 +34,7 @@ public class Tests {
     }
 
     /**
-     * Método que confere se pode ser criado um funcionário com valores inválidos.
+     * Metodo que confere se pode ser criado um funcionario com valores invalidos.
      */
     @Test
     public void funcionarioInvalido(){
@@ -46,7 +46,7 @@ public class Tests {
     }
 
     /**
-     * Método que confere se pode ser criado um cliente com valores inválidos.
+     * Metodo que confere se pode ser criado um cliente com valores invalidos.
      */
     @Test
     public void clienteInvalido(){
@@ -58,7 +58,7 @@ public class Tests {
     }
 
     /**
-     * Método que confere se pode ser criado um produto com valores inválidos.
+     * Metodo que confere se pode ser criado um produto com valores invalidos.
      */
     @Test
     public void produtoInvalido(){
@@ -70,7 +70,7 @@ public class Tests {
     }
 
     /**
-     * Método que confere se a lógica por trás do calculo de desconto do produto está certa.
+     * Metodo que confere se a logica por tras do calculo de desconto do produto esta certa.
      */
     @Test
     public void descontoDoProduto(){

@@ -13,7 +13,7 @@ import java.nio.file.StandardOpenOption;
 public class Arquivo{
 
     /**
-     * Método que cria o arquivo desejado caso ele não exista.
+     * Metodo que cria o arquivo desejado caso ele nao exista.
      * @since 1.0.0
      * @param tipo String
      */
@@ -28,7 +28,7 @@ public class Arquivo{
     }
 
     /**
-     * Método que preenche o arquivo desejado com as informações digitadas.
+     * Metodo que preenche o arquivo desejado com as informações digitadas.
      * @param tipo String
      * @param conteudo String
      */
@@ -46,7 +46,7 @@ public class Arquivo{
     }
 
     /**
-     * Método que imprime o arquivo na tela para a leitura.
+     * Metodo que imprime o arquivo na tela para a leitura.
      * @param tipo String
      */
     public void leArquivo(String tipo){
@@ -65,7 +65,7 @@ public class Arquivo{
     }
 
     /**
-     * Método que exclui o arquivo inteiro.
+     * Metodo que exclui o arquivo inteiro.
      * @param tipo String
      */
     public void deletaArquivo(String tipo){

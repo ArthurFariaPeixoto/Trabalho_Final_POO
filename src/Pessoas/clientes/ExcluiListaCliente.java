@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Classe responsável por deletar o arquivo "Cliente".
+ * Classe responsavel por deletar o arquivo "Cliente".
  */
 public class ExcluiListaCliente implements ActionListener {
     @Override

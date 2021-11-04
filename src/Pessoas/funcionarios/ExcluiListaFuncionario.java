@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Classe responsável por deletar o arquivo "Funcionario".
+ * Classe responsavel por deletar o arquivo "Funcionario".
  */
 public class ExcluiListaFuncionario implements ActionListener {
     @Override

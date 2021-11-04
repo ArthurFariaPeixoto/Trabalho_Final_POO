@@ -3,7 +3,7 @@ package TratamentoErro;
 import javax.swing.*;
 
 /**
- * Classe customizada de tratamento de erro. Aponta um erro no cadastro de: clientes, funcionários e produtos.
+ * Classe customizada de tratamento de erro. Aponta um erro no cadastro de: clientes, funcionarios e produtos.
  */
 public class CadastroInvalidoException extends RuntimeException{
 

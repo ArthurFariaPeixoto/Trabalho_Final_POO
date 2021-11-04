@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Classe responsável por imprimir as informações do arquivo "Produto" na tela.
+ * Classe responsavel por imprimir as informacoes do arquivo "Produto" na tela.
  */
 public class ProdutoRetorno implements ActionListener {
     @Override

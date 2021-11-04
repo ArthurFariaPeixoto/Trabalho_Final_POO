@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Classe responsável pela leitura de dados informada pelo usuario e pela criação de um novo Produto que logo é registrado no arquivo.
+ * Classe responsavel pela leitura de dados informada pelo usuario e pela criacao de um novo Produto e logo depois o registra no arquivo.
  */
 public class CadastroProdutoListener implements ActionListener {
     @Override

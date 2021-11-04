@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Classe responsável por imprimir as informações do arquivo "Funcionario" na tela.
+ * Classe responsavel por imprimir as informacoes do arquivo "Funcionario" na tela.
  */
 public class FuncionarioRetorno implements ActionListener {
     @Override

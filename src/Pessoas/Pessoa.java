@@ -1,7 +1,7 @@
 package Pessoas;
 
 /**
- * Classe abstrata com dados comuns entre clientes e funcionários.
+ * Classe abstrata com dados comuns entre clientes e funcionarios.
  */
 public abstract class Pessoa {
 

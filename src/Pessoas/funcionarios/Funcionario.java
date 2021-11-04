@@ -3,7 +3,7 @@ package Pessoas.funcionarios;
 import Pessoas.Pessoa;
 
 /**
- * Classe de dados do funcionário.
+ * Classe de dados do funcionario.
  */
 public class Funcionario extends Pessoa {
 
